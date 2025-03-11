@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Quiz Game</title>
+    <link rel="stylesheet" href="styless.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div id="top-panel">
+            <h1 id="game-title">Tetris Quiz Game</h1>
+            <div id="instructions">
+                You need to reach the target score to answer the question.<br>
+                Use arrow keys to move and rotate the pieces.
+            </div>
+            <div id="button-panel">
+                <button id="start-button">Start</button>
+                <button id="pause-button">Pause</button>
+                <button id="stop-button" disabled>Stop</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="game-stats">
+                <div>Score: <span id="score">0</span></div>
+                <div>Level: <span id="level">1</span></div>
+                <div>Target: <span id="target-score">10</span></div>
+            </div>
+            <canvas id="tetris-board"></canvas>
+            <div id="wrong-list" class="wrong-answers"></div>
+        </div>
+
+        <div id="question-modal" class="modal">
+            <div class="modal-content">
+                <h2>Java Quiz Question</h2>
+                <p id="question-text"></p>
+                <div id="options-container"></div>
+            </div>
+        </div>
+
+        <div id="game-over-modal" class="modal">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-scene">
+        <div class="car"></div>
+        <div class="road"></div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
